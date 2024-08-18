@@ -2,7 +2,8 @@
 {% block content %}
     <h3 style="text-align: center" class="text-secondary">Upload a file to get started</h3>
     <div class="container" style="max-width: 500px">
-         <form style="margin: 20px">
+         <form method="POST" action="" style="margin: 20px">
+             {% csrf_token %}
             <input class="form-control" type="file" id="formFile">
             <br />
             <button type="submit" class="btn btn-primary">Submit</button>
